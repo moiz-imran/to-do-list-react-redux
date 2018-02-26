@@ -11,7 +11,6 @@ let DateForm = ({ date, dispatch }) => {
                 onSubmit={e => {
                     e.preventDefault()
                     dispatch(setDate(input.value))
-                    input.value = ''
                 }} 
             >
                 <input
