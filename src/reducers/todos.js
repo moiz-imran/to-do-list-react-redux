@@ -16,7 +16,7 @@ const todos = (state = [], action) => {
                     index = i;
                 }
             })
-            return [...todo.slice(0, index), ...todo.slice(index + 1)]
+            return [...state.slice(0, index), ...state.slice(index + 1)]
         case 'TOGGLE_TODO':
             return state.map(todo =>
                 (todo.id === action.id)
