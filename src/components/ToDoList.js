@@ -33,8 +33,8 @@ class ToDoList extends React.Component {
                             {todo.id === selected && 
                                 <ToDoCard
                                     {...todo} 
-                                    onCompleted={onCompleted}
-                                    onRemoved={onRemoved}
+                                    onCompleted={() => onCompleted(todo.id)}
+                                    onRemoved={() => onRemoved(todo.id)}
                                 />
                             }
                         </div>
