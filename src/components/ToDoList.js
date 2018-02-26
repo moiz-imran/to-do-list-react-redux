@@ -24,15 +24,14 @@ class ToDoList extends React.Component {
             <ul>
                 {todos.map(todo => {
                     return (
-                        <div>
+                        <div key={todo.id}>
                             <Todo
-                                key={todo.id}
                                 title={todo.title}
                                 id={todo.id}
                                 onClick={this.onClick}
                             />
                             {todo.id === selected && 
-                                <ToDoCard 
+                                <ToDoCard
                                     {...todo} 
                                     onCompleted={onCompleted}
                                     onRemoved={onRemoved}

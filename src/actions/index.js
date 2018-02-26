@@ -18,3 +18,14 @@ export const removeToDo = id => {
         id
     }
 }
+
+let nextToDoID = 0;
+export const addToDo = (title, text, date) => {
+    return {
+        type: 'ADD_TODO',
+        id: nextToDoID++,
+        title,
+        text,
+        date
+    }
+}
