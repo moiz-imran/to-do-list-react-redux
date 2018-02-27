@@ -31,8 +31,7 @@ class ToDoList extends React.Component {
                     return (
                         <div key={todo.id}>
                             <Todo
-                                title={todo.title}
-                                id={todo.id}
+                                {...todo}
                                 onClick={this.onClick}
                             />
                             {todo.id === selected && 
