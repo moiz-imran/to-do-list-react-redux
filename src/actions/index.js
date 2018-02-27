@@ -19,11 +19,10 @@ export const removeToDo = id => {
     }
 }
 
-let nextToDoID = 0;
 export const addToDo = (title, text, date) => {
     return {
         type: 'ADD_TODO',
-        id: nextToDoID++,
+        id: Math.random(),
         title,
         text,
         date

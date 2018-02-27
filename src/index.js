@@ -5,8 +5,19 @@ import todoApp from './reducers'
 import App from './components/App';
 import { Provider } from 'react-redux';
 import './index.css';
+import { loadState, saveState } from './localStorage'
 
-let store = createStore(todoApp);
+const persistedState = loadState();
+const store = createStore(
+    todoApp,
+    persistedState
+);
+
+store.subscribe(() => {
+    saveState({
+        todos: store.getState().todos
+    });
+})
 
 const root = document.getElementById('root');
 ReactDOM.render(
