@@ -23,10 +23,11 @@ class ToDoList extends React.Component {
     }
 
     render() {
-        const { todos, onCompleted, onRemoved } = this.props;
+        const { todos, onCompleted, onRemoved, date } = this.props;
         const { selected } = this.state;
         return (
             <ul>
+                <h3>{new Date(date).toDateString()}</h3>
                 {todos.map(todo => {
                     return (
                         <div key={todo.id}>
