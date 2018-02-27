@@ -2,6 +2,7 @@ import React from 'react'
 import DateForm from '../containers/DateForm'
 import VisibleToDoList from '../containers/VisibleToDoList'
 import AddToDo from '../containers/AddToDo'
+import Footer from '../components/Footer'
 
 const App = () => (
     <div>
@@ -9,6 +10,7 @@ const App = () => (
         <DateForm />
         <VisibleToDoList />
         <AddToDo />
+        <Footer />
     </div>
 )
 

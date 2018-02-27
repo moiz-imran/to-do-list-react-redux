@@ -29,3 +29,10 @@ export const addToDo = (title, text, date) => {
         date
     }
 }
+
+export const setStatusFilter = filter => {
+    return {
+        type: 'SET_STATUS_FILTER',
+        filter
+    }
+}

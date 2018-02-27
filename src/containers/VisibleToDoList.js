@@ -17,7 +17,7 @@ const getVisibleToDos = (todos, filter, date) => {
 
 const mapStateToProps = state => {
     return {
-        todos: getVisibleToDos(state.todos, state.stateFilter, state.dateFilter)
+        todos: getVisibleToDos(state.todos, state.statusFilter, state.dateFilter)
     }
 }
 

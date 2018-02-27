@@ -14,7 +14,12 @@ class ToDoList extends React.Component {
     }
 
     onClick(id) {
-        this.setState({ selected: id })
+        const { selected } = this.state
+        if(id === selected) {
+            this.setState({ selected: null })
+        } else {
+            this.setState({ selected: id })
+        }
     }
 
     render() {
